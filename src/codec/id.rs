@@ -566,6 +566,21 @@ pub enum Id {
     HCA,
     #[cfg(feature = "ffmpeg_4_3")]
     EPG,
+
+    PGX,
+    AVS3,
+    MSP2,
+    VVC,
+    MOBICLIP,
+    PHOTOCD,
+    IPU,
+    ARGO,
+    CRI,
+    SIMBIOSIS_IMX,
+    SGA_VIDEO,
+    PCM_SGA,
+    ADPCM_IMA_MOFLEX,
+    FASTAUDIO,
 }
 
 impl Id {
@@ -1139,6 +1154,21 @@ impl From<AVCodecID> for Id {
             AV_CODEC_ID_HCA => Id::HCA,
             #[cfg(feature = "ffmpeg_4_3")]
             AV_CODEC_ID_EPG => Id::EPG,
+
+            AV_CODEC_ID_PGX => Id::PGX,
+            AV_CODEC_ID_AVS3 => Id::AVS3,
+            AV_CODEC_ID_MSP2 => Id::MSP2,
+            AV_CODEC_ID_VVC => Id::VVC,
+            AV_CODEC_ID_MOBICLIP => Id::MOBICLIP,
+            AV_CODEC_ID_PHOTOCD => Id::PHOTOCD,
+            AV_CODEC_ID_IPU => Id::IPU,
+            AV_CODEC_ID_ARGO => Id::ARGO,
+            AV_CODEC_ID_CRI => Id::CRI,
+            AV_CODEC_ID_SIMBIOSIS_IMX => Id::SIMBIOSIS_IMX,
+            AV_CODEC_ID_SGA_VIDEO => Id::SGA_VIDEO,
+            AV_CODEC_ID_PCM_SGA => Id::PCM_SGA,
+            AV_CODEC_ID_ADPCM_IMA_MOFLEX => Id::ADPCM_IMA_MOFLEX,
+            AV_CODEC_ID_FASTAUDIO => Id::FASTAUDIO,
         }
     }
 }
@@ -1704,6 +1734,21 @@ impl Into<AVCodecID> for Id {
             Id::HCA => AV_CODEC_ID_HCA,
             #[cfg(feature = "ffmpeg_4_3")]
             Id::EPG => AV_CODEC_ID_EPG,
+
+            Id::PGX => AV_CODEC_ID_PGX,
+            Id::AVS3 => AV_CODEC_ID_AVS3,
+            Id::MSP2 => AV_CODEC_ID_MSP2,
+            Id::VVC => AV_CODEC_ID_VVC,
+            Id::MOBICLIP => AV_CODEC_ID_MOBICLIP,
+            Id::PHOTOCD => AV_CODEC_ID_PHOTOCD,
+            Id::IPU => AV_CODEC_ID_IPU,
+            Id::ARGO => AV_CODEC_ID_ARGO,
+            Id::CRI => AV_CODEC_ID_CRI,
+            Id::SIMBIOSIS_IMX => AV_CODEC_ID_SIMBIOSIS_IMX,
+            Id::SGA_VIDEO => AV_CODEC_ID_SGA_VIDEO,
+            Id::PCM_SGA => AV_CODEC_ID_PCM_SGA,
+            Id::ADPCM_IMA_MOFLEX => AV_CODEC_ID_ADPCM_IMA_MOFLEX,
+            Id::FASTAUDIO => AV_CODEC_ID_FASTAUDIO,
         }
     }
 }

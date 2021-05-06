@@ -43,6 +43,9 @@ pub enum Type {
 
     #[cfg(feature = "ffmpeg_4_3")]
     VIDEO_ENC_PARAMS,
+
+    SEI_UNREGISTERED,
+    FILM_GRAIN_PARAMS,
 }
 
 impl Type {
@@ -91,6 +94,9 @@ impl From<AVFrameSideDataType> for Type {
 
             #[cfg(feature = "ffmpeg_4_3")]
             AV_FRAME_DATA_VIDEO_ENC_PARAMS => Type::VIDEO_ENC_PARAMS,
+
+            AV_FRAME_DATA_SEI_UNREGISTERED => Type::SEI_UNREGISTERED,
+            AV_FRAME_DATA_FILM_GRAIN_PARAMS => Type::FILM_GRAIN_PARAMS,
         }
     }
 }
@@ -132,6 +138,9 @@ impl Into<AVFrameSideDataType> for Type {
 
             #[cfg(feature = "ffmpeg_4_3")]
             Type::VIDEO_ENC_PARAMS => AV_FRAME_DATA_VIDEO_ENC_PARAMS,
+            
+            Type::SEI_UNREGISTERED => AV_FRAME_DATA_SEI_UNREGISTERED,
+            Type::FILM_GRAIN_PARAMS => AV_FRAME_DATA_FILM_GRAIN_PARAMS,
         }
     }
 }
